@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+Preamble/declaration: prevents the browser from switching into quirks mode;
+browser follows the relevant specifications
+-->
+
+<!-- Main root: represents the root (top-level element) of an HTML document -->
+<html lang="en-US">
+  <!--
+  Document metadata: information about the page, SEO, etc
+  Examples: <head>, <meta>, <title>
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Elements Reference (Mozilla)</title>
+    <!--
+    Meta Front-End Developer Professional Certificate
+    Course: Introduction to Front-End Development
+    Week 2: Additional resource: HTML Elements Reference (Mozilla) 
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+    -->
+  </head>
+  <!-- Sectioning root: represents the content of an HTML document: -->
+  <body>
+    <!--
+    Content sectioning: semantics;
+    organize document content into logical pieces; sections of content
+    Examples: <h1-h6>, <article>, <footer>, <section>, <nav>, etc
+    -->
+    <main>
+      <h1>HTML Elements Reference (Mozilla)</h1>
+      <section>
+        <h2>Text content</h2>
+        <!--
+        Text content: Organize blocks or sections of content;
+        identify the purpose or structure of that content
+        Examples: <div>, <ul>, <figure>, etc
+        -->
+        <div>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <!--
+        Inline text semantics: define the meaning, structure
+        or style of a word or piece of text
+        Examples: <a>, <br>, <strong>, etc
+        -->
+        <h2>Inline text semantics</h2>
+        <p>
+          A paragraph with <a href="">link</a>,
+          <br /> 
+          line break
+          <br />
+          and <strong>bold and/or important text.</strong>        
+        </p>
+      </section>
+      <section>
+        <!--
+        Image and multimedia: various multimedia resources; images, audio, etc
+        Examples: <img>, <audio>, etc
+        -->
+        <h2>Image and multimedia</h2>
+        <img src="falafel.jpg"  width="100" height="100" alt="A falafel" />
+      </section>
+      <section>
+        <figure>
+          <figcaption>Monster warrior roar</figcaption>
+          <audio controls src="monster-warrior-roar-195877.mp3"></audio>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
