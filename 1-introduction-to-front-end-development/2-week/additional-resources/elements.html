@@ -66,17 +66,18 @@ browser follows the relevant specifications
         Examples: <img>, <audio>, etc
         -->
         <h2>Image and multimedia</h2>
-        <img src="media/lain.jpg"  width="100" height="100" alt="A falafel" />
+        <img src="media/lain.jpg"  width="100" height="100" alt="Fictional character Lain from the anime series Serial Experiments Lain" />
         <figure>
           <figcaption>Monster warrior roar</figcaption>
-          <audio controls src="media/"></audio>
+          <audio controls src="media/monster-warrior-roar-195877.mp3"></audio>
         </figure>
       </section>
       <section>
         <!--
         Embedded content: nested browsing content and other multimedia content
-        Exammples: <iframe>, <picture>, etc
+        Examples: <iframe>, <picture>, etc
         -->
+        <!-- iframe -->
         <h2>Embedded content</h2>
         <iframe
           src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
@@ -84,6 +85,7 @@ browser follows the relevant specifications
           width="300"
           height="200"></iframe>
         <br />
+        <!-- picture -->
         <picture>
           <source
             srcset="media/lain200x200.jpg"
@@ -102,6 +104,7 @@ browser follows the relevant specifications
         Examples: <svg>, <math>
         -->
         <h2>SVG and MathML</h2>
+        <!-- SVG -->
         <svg
           viewBox="0 0 30 10"
           width="300"
@@ -125,6 +128,181 @@ browser follows the relevant specifications
           <circle cx="10" cy="5" r="2" />
           <circle cx="17" cy="5" r="3" />
         </svg>
+        <!-- MathML -->
+        <p>
+          A pretty cool frac:
+          <math display="inline">
+            <mfrac>
+              <msup>
+                <mi>5</mi>
+                <mn>2</mn>
+              </msup>
+              <mn>6</mn>
+            </mfrac>
+          </math>
+        </p>
+        <p>
+          An <em>even cooler</em> frac:
+          <math>
+            <mfrac>
+              <msup>
+                <mi>Dawg</mi>
+                <mn>Frawg -2</mn>
+              </msup>
+              <mn>Anteater</mn>
+            </mfrac>
+          </math>
+        </p>
+      </section>
+      <section>
+        <!--
+        Scripting: create dynamic content and web applocations
+        Examples: <script>, <canvas>
+        -->
+        <h2>Scripting</h2>
+        <canvas id="canvas" width="150" height="150"></canvas>
+        <script>
+          const canvas = document.getElementById("canvas"); 
+          const myAwesomePaint = canvas.getContext("2d");
+          myAwesomePaint.lineWidth = "10";
+          myAwesomePaint.fillStyle = "red";
+          myAwesomePaint.fillRect(0, 0, 150, 150);
+          myAwesomePaint.strokeRect(0, 0, 150, 150);
+          // I have no idea how this works but it's fun to play with
+          myAwesomePaint.beginPath();
+          myAwesomePaint.moveTo(1, 1);
+          myAwesomePaint.lineTo(150, 150);
+          myAwesomePaint.closePath();
+          myAwesomePaint.stroke();
+        </script>
+      </section>
+      <section>
+        <!--
+        Demarcading edits: indications that specific parts of a text have been altered
+        Examples: <del>, <ins>
+        *** Those have accessibility concerns: ***
+        *** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del ***
+        -->
+        <h2>Demarcading edits</h2>
+        <p>
+          <strong>03-28-2024: Updated terminology</strong>
+          <br />
+          <del>Dogs</del> and <del>Frogs</del> keep <del>Anteaters</del> away!
+          <br />
+          <ins>Dawgs</ins> and <ins>Frawgs</ins> keep <ins>Antheaters</ins> away!
+        </p>
+      </section>
+      <section>
+        <!-- Table content: create and handle tabular data -->
+        <h2>Table content</h2>
+        <!-- CSS -->
+        <style>
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+          }
+        </style>
+        <!-- Table -->
+        <table>
+          <caption>
+            <strong>Updated Terminologies</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">New</th>
+              <th scope="col">Old</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Dawg</th>
+              <td>Dog</td>
+            </tr>
+            <tr>
+              <th scope="row">Frawg</th>
+              <td>Frog</td>
+            </tr>
+            <tr>
+              <th scope="row">Antheater</th>
+              <td>Anteater</td>
+            </tr>
+            <tr>
+              <th scope="row">Goobie</th>
+              <td>Google</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <!-- Forms: submitting information to a website or application -->
+        <h2>Forms</h2>
+        <form action="" method="get"> <!-- Sends information as parameters in the URL -->
+            <!-- Credentials -->
+            <fieldset>
+            <legend>Your credentials</legend>
+            <label for="name">Enter your name:</label>
+            <input type="text" name="name" id="name" required />
+            <br />
+            <label for="nickname">Enter your nickname:</label>
+            <input type="text" name="nickname" id="nickname" />
+            <br />
+            <label for="email">Enter your email:</label>
+            <input type="email" name="email" id="email" required />
+            <br />
+            <label for="password">Enter your password:</label>
+            <input type="password" name="password" id="password" required />
+            <br />
+            </fieldset>
+            <!-- About -->
+            <fieldset>
+            <legend>About you</legend>
+            <p>Are you into web development?</p>
+            <input type="radio" id="yes-web" name="web-development" value="yes-web" required />
+            <label for="yes-web">Yes</label>  
+            <input type="radio" id="no-web" name="web-development" value="no-web" required />
+            <label for="no-web">No, I'm here for something else</label>
+            <br /> <br />
+            <label for="about-yourself">Tell us a little bit about yourself:</label>
+            <br />
+            <textarea id="about-yourself" name="about-yourself" rows="5" cols="50" placeholder="I like traveling..."></textarea>
+          </fieldset>
+          <!-- Terms -->
+          <fieldset>
+            <legend>Do you agree with our terms?</legend>
+            <input type="checkbox" id="yes" name="terms" value="yes" required />
+            <label for="yes">Yes</label>
+          </fieldset>
+          <!-- Submit or Reset -->
+          <input type="submit" value="Create account" />
+          <input type="reset" value="Cancel" />
+        </form>
+      </section>
+      <section>
+        <!--
+        Interactive elements: interactive user interface objects
+        Examples: <details>, <summary>
+        -->
+        <h2>Interactive Elements</h2>
+        <!-- CSS -->  
+        <style>
+          details {
+           display: inline-block;
+          }
+          details[open] {
+            background-color: black;
+            color: red;
+          }
+          details > p {
+            color:aqua;
+          }
+        </style>
+        <!-- Details and Summary -->
+        <details>
+        <summary>Do NOT open this.</summary>
+        <p>GET OUT!</p>
+        </details>
       </section>
     </main>
   </body>
