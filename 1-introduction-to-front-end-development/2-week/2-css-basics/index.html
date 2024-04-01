@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS</title>
+  </head>
+  <body>
+    <style>
+      /*
+      css Rules
+      Selector | Declaration block
+      h1       | declaration (property + value)
+      */
+
+      /*
+      Class Selector
+      Predefined Color Name
+      */
+      .paragraph1 {
+        color: blue;
+        font-size: 30px;
+        text-decoration-line: line-through;
+        text-decoration-color: red;
+        text-decoration-style: dotted;
+        text-decoration-thickness: 5px;
+      }
+      /* 
+      ID Selector
+      RGBA: Red, Green, Blue, Alpha
+      */
+      #land {
+       color: rgb(255, 0, 0, 0.8);  
+      }
+      /*
+      Descendant Selector
+      HSL: Hue, Saturation, Lightness
+      Hexadecimal: 1-9, A-F
+      */
+      #blog h1 {
+        color: hsl(110, 80%, 30%);
+        font-family: "Courier New", monospace;
+        font-size: 30px;
+      }
+      .child p {
+        color: #a52a2a;  
+        font-family: "Tahoma";
+        font-size: 20px;
+      }
+      /* Child Selectors: immediate descendants */
+      #blog > h1 {
+        color: aqua;
+        text-decoration: underline aqua solid 10px;
+      }
+      .child > p {
+        color: magenta;
+        font-family:'Times New Roman', Times, serif;
+        text-decoration-line: overline;
+        text-decoration-color: magenta;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 5px;
+      }
+      /* Pseudo-Class Selector: based on their state */
+      a:hover {
+        color: red;
+      }
+      .link > a:hover {
+        color: orange;
+      }
+      .link .pink:hover {
+        color: pink;
+      }
+      .link #link2 a:hover {
+      color: brown;
+      text-transform: uppercase;
+      }
+    </style>
+
+    <p class="paragraph1">Once upon a time...</p>
+    <p class="paragraph2">In a hidden <span id="land">land</span>...</p>
+    <div id="blog">
+      <h1>Blog Title</h1>
+      <div class="child">
+        <h1>Today's weather</h1>
+        <p>Magenta</p>
+        <div>
+          <p>Brown</p>
+        </div>
+      </div>
+      <p>Another paragraph</p>
+
+    </div>
+    <div class="link">
+      <a href="">Orange when hovering</a>
+      <a href="" class="pink">Pink when hovering</a>
+      <div id="link2">
+        <a href="">Brown and uppercase when hovering</a>
+      </div>
+    </div>
+    <a href="">Red when hovering</a>
+  </body>
+
+</html>
