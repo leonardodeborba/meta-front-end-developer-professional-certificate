@@ -26,8 +26,8 @@ Uses a combination of multiple physical and virtual servers. In case a physical 
 
 - A web server stores and delivers the content for a website to clients (such as a web browser) that request it.
 - Uses HTTP Protocol to communicate with the browser.
-- Web acceleration: When a webserver caches content to speed delivery of a commonly requested content.
-- Virtual Hosting: A Web server can host a single or multiple websites using the same software and hardware resources.
+- Web acceleration: when a web server caches content to speed delivery of a commonly requested content.
+- Virtual Hosting: a Web server can host a single or multiple websites using the same software and hardware resources.
 
 ## What is a Web Browser? (Mozilla)
 
@@ -94,8 +94,9 @@ Most commonly used methods:
 
 #### HTTP Response
 
-Consists of headers, version, status code and status message, and a message body which corresponds to the content given.
+Consists of headers, version, status code, status message and a message body which corresponds to the content given.
 
+<pre>
 HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
@@ -104,6 +105,7 @@ ETag: "51142bc1-7449-479b075b2891b"
 Accept-Ranges: bytes
 Content-Length: 29769
 Content-Type: text/html
+</pre>
 
 **Status Codes** - Grouped by the first digit of the error:
 
@@ -147,7 +149,7 @@ Content-Type: text/html
 ### File Transfer Protocol (FTP)
 
 - Used to transfer files from a local computer to a server.
-- The data is transfered insecurely (different from SFTP)
+- The data is transfered insecurely (different from SFTP).
 - Requires an FTP Server and an FTP Client.
 
 ### Secure Shell Protocol (SSH)
@@ -165,7 +167,7 @@ Content-Type: text/html
 
 - Webpage is a single page.
 - Website is a group of webpages linked together in the same domain name.
-- Web Apps or Web Applications, in comparison to a website, provides higher level of interactivity, personalized and dynamic content. The content shown depends on the user's inputs.   
+- Web Apps or Web Applications, in comparison to a website, provide higher level of interactivity, personalized and dynamic content. The content shown depends on the user's inputs.   
 
 ## Developer Tools
 
@@ -182,14 +184,14 @@ Performance tab - How the web browser is performing displaying the web page; Pin
 - Re-usable pieces of code, provides specific functionality.
 - Easier to replace than a framework.
 - Needs to select library set compability.
-- Unopinionated
+- Unopinionated.
 
 ### Framework 
 
 - Provides a structure for a web developer to build with, which has rules.
 - Encourages or even "forces" to use best practices.
 - Harder to replace than a library.
-- Opinionated
+- Opinionated.
 
 ## Application Programming Interface (API) and Services
 
@@ -241,9 +243,20 @@ Performance tab - How the web browser is performing displaying the web page; Pin
 - Tree structure: nodes, parents and children.
 - Each node and element is an object.
 
-## Accessible Rich Internet Application (ARIA)
+## Web Accessibility
 
-Web accessiblity semantics.
+- WAI: Web Accessibility Initiative
+
+### Assistive technologies
+
+- Screen reader software
+- Speech recognition software
+- Subtitles and scripts, etc
+
+### Accessible Rich Internet Application (ARIA) Specification
+
+- Web accessiblity semantics.
+- Techniques to improve accessibility.
 
 
 # Module 3: UI Frameworks
@@ -353,12 +366,10 @@ Files and content that the server transfers just as it is stored on the web serv
 ### Dynamic Content
 
 - Generated when the HTTP Request is made
-- Can be:
-  - Based on an input of a user
-  - Based on the current date
+- Can be based on user's input, current date, etc
 
 1. Web browser action --> Web server --> Application server (or backend) --> generates dynamic content
-2. Web rowser <-- Web server <-- Application server sends back the dynamic content generated
+2. Web browser <-- Web server <-- Application server sends back the dynamic content generated
 
 ## Application Server
 
@@ -368,7 +379,7 @@ Files and content that the server transfers just as it is stored on the web serv
 
 ## Caching
 
-Web server saves a copy of dynamic content readily availabe upon request.
+Web server saves a copy of dynamic content readily available upon request.
 
 ## Single Page Application (SPA)
 
@@ -400,9 +411,9 @@ A small piece of a user interface.
 ### Reconciliation Process
 
 1. The Virtual DOM is updated
-2. Diffs the updated version of the virtual DOM with the previous version and check which elements have changed.
-3. Changed elements are updated in the Browser DOM.
-4. Webpage updates to match the Browser DOM.
+2. Diffs the updated version of the virtual DOM with the previous version and check which elements have changed
+3. Changed elements are updated in the Browser DOM
+4. Webpage updates to match the Browser DOM
 
 ### React Fiber Architecture
 
